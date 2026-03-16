@@ -8,27 +8,30 @@ import {
 
 const faqs = [
   {
-    q: "Who can participate in Insignia 2k26?",
-    a: "Any undergraduate or postgraduate student can register. Teams of 2-4 members are required. No prior data analytics experience needed — just curiosity and determination.",
-  },
-  {
-    q: "What tools and software are allowed?",
-    a: "You can use any programming language or tool including Python, R, Excel, Tableau, or Power BI. The impostor is inefficiency — use whatever weapon you prefer.",
-  },
-  {
-    q: "How are winners determined?",
-    a: "Each round is evaluated by a panel of industry experts. Points are cumulative across all three rounds. The crew with the highest total score wins the grand prize.",
+    q: "Who can participate in Insignia 2K26?",
+    a: "Insignia 2K26 is open to all undergraduate and postgraduate students. Participants from any department or college can join the competition. Teams may include members from different years or departments.",
   },
   {
     q: "Is there a registration fee?",
-    a: "Early bird registration is free! Regular registration has a nominal fee. Check the registration page for current pricing and deadlines.",
+    a: "Yes, the registration fee is ₹70 for internal teams and ₹100 for external or mixed teams. The fee can be paid via UPI at the CSE Department, and participants must keep the receipt for verification.",
   },
   {
-    q: "What are the prizes?",
-    a: "Cash prizes, internship opportunities, certificates, and exclusive merch await the top crews. Every participant receives a certificate of participation.",
+    q: "What prizes will the winners receive?",
+    a: "The winning teams will receive prizes worth ₹6000 along with certificates for winners and runner-ups. All participants will also receive participation e-certificates, eligible for MAR points.",
   },
+  {
+    q: "When and where will Insignia 2K26 take place?",
+    a: "The event will be held at MCKVIE, Block A, 3rd Floor, CSE Department on 27th March 2026 from 9:30 AM onwards.",
+  },
+  {
+    q: "What is the last date to register?",
+    a: "The last date for registration is 20th March 2026. Participants are encouraged to register early to secure their spot.",
+  },
+  {
+    q: "What should participants bring on the event day?",
+    a: "Participants should bring their valid student ID and payment receipt. Everything else required for the competition will be arranged at the venue.",
+  }
 ];
-
 const FAQSection = () => {
   return (
     <section id="faq" className="py-20 px-4">

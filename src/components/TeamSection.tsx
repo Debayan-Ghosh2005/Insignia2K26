@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 
 const members = Array.from({ length: 14 }, (_, i) => ({
   name: ["Captain", "Navigator", "Engineer", "Commander", "Sentinel", "Security", "Pilot", "Analyst", "Strategist", "Operator", "Recon", "Architect", "Medic", "Scientist"][i],
@@ -7,29 +6,18 @@ const members = Array.from({ length: 14 }, (_, i) => ({
   image: `/member${i + 1}.png`,
 }));
 
+// Duplicate the array to create the seamless loop illusion
+const duplicatedMembers = [...members, ...members];
+
 const CARD_WIDTH = 220;
-const GAP = 24;
-const VISIBLE = 1;
-const SLIDE_INTERVAL = 2000;
+const GAP = 24; // Tailwind gap-6 is exactly 24px
 
 const TeamSection = () => {
-  const [offset, setOffset] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setOffset((prev) => {
-        const maxOffset = members.length - VISIBLE;
-        return prev >= maxOffset ? 0 : prev + 1;
-      });
-    }, SLIDE_INTERVAL);
-    return () => clearInterval(interval);
-  }, []);
-
-  const translateX = -(offset * (CARD_WIDTH + GAP));
+  // Calculate exactly how far to slide before looping
+  const slideDistance = (CARD_WIDTH + GAP) * members.length;
 
   return (
-    <section id="team" className="py-20 px-4">
+    <section id="team" className="py-20 px-4 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -43,15 +31,19 @@ const TeamSection = () => {
           </h2>
         </motion.div>
 
-        <div className="overflow-hidden" ref={containerRef}>
-          <div
-            className="flex gap-6 transition-transform duration-700 ease-in-out"
-            style={{
-              transform: `translateX(${translateX}px)`,
-              width: `${members.length * (CARD_WIDTH + GAP)}px`,
+        {/* Outer container to hide the overflow */}
+        <div className="overflow-hidden w-full flex">
+          <motion.div
+            className="flex gap-6"
+            // Animate from 0 to the exact width of the original list
+            animate={{ x: [0, -slideDistance] }}
+            transition={{
+              repeat: Infinity, // Loop forever
+              ease: "linear",   // Maintain a constant speed
+              duration: 25,     // Increase to slow down, decrease to speed up
             }}
           >
-            {members.map((m, i) => (
+            {duplicatedMembers.map((m, i) => (
               <div
                 key={i}
                 className="among-card flex flex-col items-center gap-3 py-6 shrink-0"
@@ -68,7 +60,7 @@ const TeamSection = () => {
                 <p className="text-xs text-muted-foreground">{m.role}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

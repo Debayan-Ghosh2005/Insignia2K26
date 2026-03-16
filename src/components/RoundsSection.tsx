@@ -4,28 +4,28 @@ import { Database, BarChart3, Brain } from "lucide-react";
 const rounds = [
   {
     icon: Database,
-    title: "Task 01",
-    name: "Data Wiring",
-    desc: "Clean, transform, and prepare raw datasets. Prove you can handle the messiest of data pipelines.",
+    title: "Imposter Interrogation",
+    name: "Quiz & Aptitude",
+    desc: "Sharpen your logic and analytical thinking in this fast-paced quiz round. Solve aptitude puzzles, technical questions, and tricky scenarios to prove you’re a true crewmate and not the impostor.",
     color: "text-crew-red",
     borderColor: "border-crew-red/40",
   },
   {
     icon: BarChart3,
-    title: "Task 02",
-    name: "Visual Recon",
-    desc: "Create compelling visualizations that reveal hidden patterns. Your charts are your weapons.",
+    title: "Among Coders",
+    name: "HackerRank Challenge",
+    desc: "Enter the coding arena and complete programming challenges on HackerRank. Write efficient algorithms, debug quickly, and race against time to show your coding skills.",
     color: "text-crew-blue",
     borderColor: "border-crew-blue/40",
   },
   {
     icon: Brain,
-    title: "Task 03",
-    name: "Final Sabotage",
-    desc: "Build predictive models and present your findings. The impostor's identity lies in the data.",
+    title: "Emergency Meeting",
+    name: "Surprise Round",
+    desc: "Expect the unexpected! This round tests creativity, problem-solving, and teamwork with mystery challenges that will reveal who the real problem solver is.",
     color: "text-crew-yellow",
     borderColor: "border-crew-yellow/40",
-  },
+  }
 ];
 
 const RoundsSection = () => {
