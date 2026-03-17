@@ -152,10 +152,13 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-muted-foreground text-base md:text-lg mb-10 max-w-xl mx-auto font-body">
-          <b>The Department of Computer Science & Engineering is back with INSIGNIA 2K26,
-          an inter-college event in association with IIC, MCKVIE!
-          </b>
-        </p>
+          <b>
+    Introducing Insignia 2K26  Where Code Meets Imagination!! 🪄 <br /><br />
+    📢 The Department of Computer Science & Engineering (Data Science) of MCKVIE, 
+    in association with the Institutions' Innovation Council (IIC) and the Institution of Electronics and Telecommunication Engineers (IETE), MCKVIE, 
+    presents an electrifying inter-college coding extravaganza Insignia!
+        </b>
+      </p>
 
         <motion.a
           href="https://forms.gle/g2sD5zqgcEWUsQrB9"

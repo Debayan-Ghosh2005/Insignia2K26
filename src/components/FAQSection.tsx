@@ -30,7 +30,11 @@ const faqs = [
   {
     q: "What should participants bring on the event day?",
     a: "Participants should bring their valid student ID and payment receipt. Everything else required for the competition will be arranged at the venue.",
-  }
+  },
+  {
+  q: "Will food be provided to participants?",
+  a: "Food will be provided only to the teams who qualify for Round 2 of the competition."
+ },
 ];
 const FAQSection = () => {
   return (
