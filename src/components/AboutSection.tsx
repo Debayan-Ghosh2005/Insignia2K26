@@ -37,8 +37,9 @@ const AboutSection = () => {
           <div>
             <h3 className="font-pixel text-xs text-crew-yellow mb-2">Welcome, Crewmate</h3>
             <p className="text-muted-foreground text-sm leading-relaxed justified-text">
-              Welcome to Insignia, an electrifying inter-college coding competition organized by the CSE Department of MCKVIE. It brings together passionate coders and problem solvers to test their analytical and programming skills. Participants will face exciting challenges across multiple rounds designed to push creativity and logic. Assemble your team, sharpen your coding skills, and get ready to compete for glory and exciting prizes.
-            </p>
+              Welcome, Crewmate
+Welcome to *Insignia - 2k26*, an electrifying inter-college coding competition organized by the CSE Department of MCKVIE. It brings together passionate coders and problem solvers to test their analytical and programming skills. Participants will face exciting challenges across multiple rounds designed to push creativity and logic. Assemble your team, sharpen your coding skills, and get ready to compete for glory and exciting prizes.
+              </p>
           </div>
         </motion.div>
 
