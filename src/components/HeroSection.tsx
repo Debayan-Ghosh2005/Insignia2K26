@@ -160,21 +160,28 @@ const HeroSection = () => {
         </b>
       </p>
 
-        <motion.a
-          href="https://forms.gle/g2sD5zqgcEWUsQrB9"
-          target="_blank"
-          className="emergency-btn inline-flex items-center gap-3"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Siren className="w-5 h-5" />
-          EMERGENCY MEETING
-          <Siren className="w-5 h-5" />
-        </motion.a>
+        <motion.div className="flex flex-col items-center justify-center p-8 border-4 border-red-600 bg-black/80 rounded-lg">
+  {/* The Icon */}
+  <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center animate-pulse mb-4">
+    <span className="text-white text-4xl font-bold">!</span>
+  </div>
 
-        <p className="mt-4 text-xs text-crew-red font-pixel animate-pulse">
-          ▲ REGISTER NOW ▲
-        </p>
+  {/* The Text */}
+  <h2 className="text-2xl font-black text-white uppercase tracking-tighter">
+    Emergency: Registration Closed
+  </h2>
+  <p className="text-gray-400 mt-2 text-center max-w-xs">
+    The crew manifest is locked. No more members can board the ship at this time.
+  </p>
+
+  {/* The Button */}
+  <button 
+    onClick={() => window.location.href = '/'}
+    className="mt-6 px-8 py-3 bg-white text-black font-bold hover:bg-gray-200 transition-colors uppercase"
+  >
+   ▲ Return to Base ▲
+  </button>
+</motion.div>
       </motion.div>
     </section>
   );
